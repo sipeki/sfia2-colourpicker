@@ -1,7 +1,7 @@
-version: "3.7"
+    version: "3.7"
 
     services:
-    
+
         Service_1:
             build: ./Service_1
             image: sipeki/service_1
@@ -43,3 +43,5 @@ version: "3.7"
             name: sfia2_network  
         another_network:
             driver: bridge
+        
+            
