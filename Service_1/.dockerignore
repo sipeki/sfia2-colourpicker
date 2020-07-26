@@ -1,0 +1,17 @@
+#ingore venv
+venv_1
+
+# ignore __pycache__
+*/__pycache__
+
+# ignore all markdown files
+*.md
+
+# ignore hidden folder
+.git
+
+# ignore gitignore file
+.gitignore
+
+#ignore Dockerfile
+Dockerfile
