@@ -20,16 +20,7 @@ pipeline {
 
             steps {
 
-                sh './scripts/build_build.sh'
-
-            }
-        
-        stage("Update Services") {
-
-            steps {
-
-                sh './scripts/swarm_setup.sh'
-                sh './scripts/build_services.sh'
+                sh './scripts/build_stack.sh'
 
             }
 
