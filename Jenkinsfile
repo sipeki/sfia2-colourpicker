@@ -23,7 +23,7 @@ pipeline {
                 sh './scripts/build_stack.sh'
 
             }
-
+        } 
 
         
 
