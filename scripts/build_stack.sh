@@ -7,11 +7,11 @@ if [[ "$(docker stack services sfia2 2> /dev/null)" == "" ]]; then
 else
 
     if [[ "$(docker stack services sfia2 -q --filter name=sfia2_Service_1 2> /dev/null)" == "" ]]; then
-        docker service update --image sipeki/sfia2_Service_1:latest sfia2_Service_1
+        docker service update --image sipeki/service_1:latest sfia2_Service_1
     fi
 
     if [[ "$(docker stack services sfia2 -q --filter name=sfia2_Service_2 2> /dev/null)" == "" ]]; then
-        docker service update --image sipeki/sfia2_Service_2:latest sfia2_Service_2
+        docker service update --image sipeki/service_2:latest sfia2_Service_2
     fi
 
     if [[ "$(docker stack services sfia2 -q --filter name=sfia2_Service_3 2> /dev/null)" == "" ]]; then
