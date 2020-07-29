@@ -9,12 +9,8 @@
             networks:
                 - sfia2_network
             
-            depends_on:
-                - Service_4
-                - Service_2
-                - Service_3
             deploy:
-                    replicas: 2
+                replicas: 2
     
         Service_2:
             image: sipeki/service_2
