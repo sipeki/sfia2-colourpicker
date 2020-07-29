@@ -1,10 +1,5 @@
 #!/bin/bash
 
-    # remove orphaned containers and services
+# remove orphaned containers and services  Deletes orphaned images
 
-    docker system prune -f
-
-    
-# Deletes orphaned images
-
-docker rmi $(docker images -f "dangling=true" -q)
+docker system prune -f
