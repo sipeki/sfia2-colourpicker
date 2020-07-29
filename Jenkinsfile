@@ -4,29 +4,44 @@ pipeline {
 
     stages {
 
-        stage("Pull Images") {
+        stage("Build Images") {
 
             steps {
 
                 sleep time: 10, unit: 'MINUTES'
                 sh 'chmod +x ./scripts/*.sh'
-                sh './scripts/pull_images.sh'
+                sh './scripts/build_images.sh'
 
             }
 
         }
 
-        stage("Build Services") {
+        stage("Deploy Stack") {
 
             steps {
 
-                sh './scripts/build_stack.sh'
+                sh './scripts/deploy_stack.sh'
 
             }
         } 
 
-        
+        stage("Update Service") {
 
+            steps {
+
+                sh './scripts/update_services.sh'
+
+            }
+        }
+
+        stage("Clean Up Services Images Containers") {
+
+            steps {
+
+                sh './scripts/clean_up.sh'
+
+            }
+        }
 
     }
 
