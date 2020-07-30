@@ -29,8 +29,3 @@
   add_hosts:
     name: "manager_hostname"
     value: "{{ manager_hostname.stdout }}"
-
-- 
-
-- name: Add worker to manager mode
-    shell: echo {{ hostvars['token']['token']}}
