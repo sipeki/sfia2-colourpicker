@@ -3,12 +3,12 @@
   apt:
     name: ['apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common']
     state: latest
-    update_cach: yes
+    update_cache: yes
   tags: docker
 
 - name: Get docker GPG key
   apt_key:
-    URL: https://download.docker.com/linux/ubuntu/gpg 
+    url: https://download.docker.com/linux/ubuntu/gpg 
     state: present
   tags: docker
 
