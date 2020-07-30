@@ -1,14 +1,6 @@
 ---
-- name: NGINX
-  hosts: swarm-worker
+- name: Install Docker-CE
+  hosts: sfia2_swarm_3
   become: true
-  tasks:
-  - name: install NGINX
-    apt: 
-      name: nginx
-      state: latest
-      update_cache: true
-  - name: Start NGINX
-    service: 
-      name: nginx 
-      state: started
+  roles:
+    - docker-installation 
