@@ -26,6 +26,6 @@
     value: "{{ worker_token.stdout }}"
 
 - name: Output manager hostname
-  add_hosts:
+  add_host:
     name: "manager_hostname"
     value: "{{ manager_hostname.stdout }}"
