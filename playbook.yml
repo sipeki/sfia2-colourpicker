@@ -1,15 +1,15 @@
 ---
-- name: Install Docker-CE on Worker
-  hosts: sfia2_swarm_3
-  become: true
-  roles:
-    - docker-installation 
-    - docker-swarm-join
-    
+
 - name: Install Docker-CE on Manager
   hosts: localhost
   connection: local
   become: true
   roles:
-    - docker-installation
     - docker-swarm-init
+
+- name: Worker Join 
+  hosts: sfia2_swarm_3
+  become: true
+   roles:
+    - docker-swarm-join
+  
