@@ -4,6 +4,8 @@
   become: true
   roles:
     - docker-installation 
+    - docker-swarm-join
+    
 - name: Install Docker-CE on Manager
   hosts: localhost
   connection: local
@@ -11,4 +13,3 @@
   roles:
     - docker-installation
     - docker-swarm-init
-    
