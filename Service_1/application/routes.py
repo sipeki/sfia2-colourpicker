@@ -27,24 +27,18 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + \
 
 db = SQLAlchemy(app)
 
-class Users(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key=True)
-    f_name = db.Column(db.String(30), nullable=False)
-    l_name = db.Column(db.String(30), nullable=False)
-    email = db.Column(db.String(150), nullable=False, unique=True)
-    address = db.Column(db.String(150), nullable=False)
-    mobile = db.Column(db.Integer, nullable=False)
-    password = db.Column(db.String(500), nullable=False)
-
-
-
+class ColourPicker(db.Model):
+    ColourID = db.Column(db.Integer, primary_key=True)
+    ColourPicked = db.Column(db.String(255), nullable=False)
+    User = db.Column(db.String(255), nullable=True)
+    ColourCreated =  db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
+    
     def __repr__(self):
-        return ''.join(['UserID: ', str(self.id), '\r\n',
-                        'Name: ', self.f_name, ' ', self.l_name, '\r\n',
-                        'Email: ', self.email, ' ', self.mobile, '\r\n',
-                        'Address: ', self.address, ' ', 'Mobile: ', self.mobile
-
-        ])
+        return ''.join(
+            [
+                'Stock ID:  ' + self.stock_id + ' Detail:  ' + self.detail + ' Price: £' + self.price + '\n'
+            ]
+        )
 
 @app.route('/', methods=['GET'])
 def home():
