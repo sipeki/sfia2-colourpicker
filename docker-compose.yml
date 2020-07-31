@@ -4,6 +4,14 @@
 
         Service_1:
             image: sipeki/service_1
+            environment:
+                MYSQL_DB_NAME: ${MYSQL_DB_NAME}
+                MYSQL_HOST: ${MYSQL_HOST}
+                MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+                MYSQL_PORT: ${MYSQL_PORT}
+                MYSQL_USER: ${MYSQL_USER}
+                SECRET_KEY: ${SECRET_KEY}
+                
             ports:
                 - "5000:5000"
             networks:
