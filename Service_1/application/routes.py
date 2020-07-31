@@ -1,5 +1,5 @@
 from application import app
-from flask import render_template, request
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from os import environ
 from datetime import datetime
@@ -14,6 +14,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = environ.get('SECRET_KEY')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + \
                                         environ.get('MYSQL_USER') + \
                                         ':' + \
@@ -23,7 +24,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + \
                                         ':' + \
                                         environ.get('MYSQL_PORT') + \
                                         '/' + \
-                                        environ.get('MYSQL_PRJ_DB_NAME')
+                                        environ.get('MYSQL_DB_NAME')
+                                        
 
 db = SQLAlchemy(app)
 
@@ -36,15 +38,16 @@ class ColourPicker(db.Model):
     def __repr__(self):
         return ''.join(
             [
-                'Colour ID:  ' + self.ColourID + ' Colour Picked:  ' + self.Picked + ' User: ' + self.User + ' Colour Created: ' + Colour Created.User + '\n'
+                'Colour ID:  ' + self.ColourID + ' Colour Picked:  ' + self.Picked + ' User: ' + self.User + ' Colour Created: ' + self.ColourCreated + '\n'
             ]
         )
 
 @app.route('/', methods=['GET'])
 def home():
     response = requests.get('http://localhost:5003/colourpicker')
-    
+
     # response = requests.get('http://service_4:5003/colourpicker')
+    
     colourpicked = response.text
 
     
@@ -53,4 +56,4 @@ def home():
     
     colourspicked = ColourPicker.query.order_by(desc(ColourPicker.ColourID)).limit(8).all()
 
-    return render_template('index.html', colourpicked = colourpicked, title = 'Home - Colour Picker', colourspicked )
+    return render_template('index.html', colourpicked = colourpicked, title = 'Home - Colour Picker', colourspicked = colourspicked)
