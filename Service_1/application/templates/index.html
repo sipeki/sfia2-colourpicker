@@ -17,5 +17,16 @@
             <button onclick="window.location.reload();">
                 Pick Colour
             </button>
+
+<!-- Lists the last 8 colours picked -->
+            {%  for colour in colourspicked %}
+                
+                <table>
+                    <tr>
+                        <b>Colour: </b><i>{{ colour.Picked }}</i> <b> Date: </b>  <i>{{  colour.ColourCreated }} </i> 
+                    </tr>
+                </table>
+            
+            {%  endfor %}
         </body>
     </html>    

@@ -29,20 +29,28 @@ db = SQLAlchemy(app)
 
 class ColourPicker(db.Model):
     ColourID = db.Column(db.Integer, primary_key=True)
-    ColourPicked = db.Column(db.String(255), nullable=False)
+    Picked = db.Column(db.String(255), nullable=False)
     User = db.Column(db.String(255), nullable=True)
     ColourCreated =  db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
     
     def __repr__(self):
         return ''.join(
             [
-                'Stock ID:  ' + self.stock_id + ' Detail:  ' + self.detail + ' Price: £' + self.price + '\n'
+                'Colour ID:  ' + self.ColourID + ' Colour Picked:  ' + self.Picked + ' User: ' + self.User + ' Colour Created: ' + Colour Created.User + '\n'
             ]
         )
 
 @app.route('/', methods=['GET'])
 def home():
-    response = requests.get('http://service_4:5003/colourpicker')
+    response = requests.get('http://localhost:5003/colourpicker')
     
+    # response = requests.get('http://service_4:5003/colourpicker')
     colourpicked = response.text
-    return render_template('index.html', colourpicked = colourpicked, title = 'Home - Colour Picker')
+
+    
+    db.session.add(ColourPicker( Picked = colourpicked ))
+    db.session.commit()
+    
+    colourspicked = ColourPicker.query.order_by(desc(ColourPicker.ColourID)).limit(8).all()
+
+    return render_template('index.html', colourpicked = colourpicked, title = 'Home - Colour Picker', colourspicked )
