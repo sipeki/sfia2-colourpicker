@@ -1,8 +1,8 @@
 from application import app
 from flask import Flask, render_template, request
-from flask_sqlalchemy import SQLAlchemy
 from os import environ
 from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
 
 import requests
 import random
@@ -54,6 +54,8 @@ def home():
     db.session.add(ColourPicker( Picked = colourpicked ))
     db.session.commit()
     
-    colourspicked = ColourPicker.query.order_by(desc(ColourPicker.ColourID)).limit(8).all()
+    colourspicked = ColourPicker.query.order_by(ColourPicker.ColourID.desc()).limit(8).all()
 
-    return render_template('index.html', colourpicked = colourpicked, title = 'Home - Colour Picker', colourspicked = colourspicked)
+    return render_template('index.html', colourpicked = colourpicked, title = "Home - Colour Picker", colourspicked = colourspicked)
+
+    

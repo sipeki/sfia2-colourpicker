@@ -18,15 +18,16 @@
                 Pick Colour
             </button>
 
-<!-- Lists the last 8 colours picked -->
+            <!-- Lists the last 8 colours picked -->
             {%  for colours in colourspicked %}
                 
-                <table>
-                    <tr>
-                        <b>Colour: </b><i>{{ colours.Picked }}</i> <b> Date: </b>  <i>{{  colours.ColourCreated }} </i> 
-                    </tr>
-                </table>
-            
+            <table>
+            <tr>
+                <b>Colour: </b><i>{{ colours.Picked }}</i> <b> Date: </b>  <i>{{  colours.ColourCreated }} </i> 
+            </tr>
+            </table>
+
             {%  endfor %}
+            
         </body>
     </html>    
