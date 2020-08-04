@@ -1,4 +1,5 @@
 #!/bin/bash
+source /var/lib/jenkins/.bashrc
 
 # Created the micro service stack if no sfia2 service stack exists
 if [[ "$(docker stack services sfia2 2> /dev/null)" == "" ]]; then
