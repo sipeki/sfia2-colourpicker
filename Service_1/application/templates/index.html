@@ -14,16 +14,20 @@
                 {{ colourpicked }}
             </p>
 
+            <p>
             <button onclick="window.location.reload();">
                 Pick Colour
             </button>
-
+            </p>
             <!-- Lists the last 8 colours picked -->
             {%  for colours in colourspicked %}
                 
             <table>
+                
             <tr>
-                <b>Colour: </b><i>{{ colours.Picked }}</i> <b> Date: </b>  <i>{{  colours.ColourCreated }} </i> 
+                
+                <td><b>Colour: </b><i>{{ colours.Picked }}</i> </td> 
+                <td> <b> Date: </b>  <i>{{  colours.ColourCreated }} </i> </td>
             </tr>
             </table>
 
