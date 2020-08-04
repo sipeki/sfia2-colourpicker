@@ -6,11 +6,12 @@ import requests
 
 @app.route('/colourpicker', methods=['GET'])
 def colourpicked():
-    # synonym = requests.get('http://service_2:5001/randomsynonym')
-    # colour = requests.get('http://service_3:5002/randomcolour')
+    synonym = requests.get('http://service_2:5001/randomsynonym')
+    colour = requests.get('http://service_3:5002/randomcolour')
 
-    synonym = requests.get('http://localhost:5001/randomsynonym')
-    colour = requests.get('http://localhost:5002/randomcolour')
+    # Used for testing on local machine
+    # synonym = requests.get('http://localhost:5001/randomsynonym')
+    # colour = requests.get('http://localhost:5002/randomcolour')
 
     response = synonym.text + " " + colour.text
     return response

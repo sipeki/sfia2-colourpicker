@@ -7,8 +7,9 @@ pipeline {
         stage("Build Images") {
 
             steps {
-                sh '~/.bashrc'    
                 sh 'chmod +x ./scripts/*.sh'
+                sh 'chmod +x ~/.bashrc'
+                sh '~/.bashrc'    
                 sh './scripts/build_images.sh'
 
             }
