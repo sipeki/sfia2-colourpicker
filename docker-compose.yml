@@ -21,9 +21,9 @@
                 MYSQL_USER: ${MYSQL_USER}
                 SECRET_KEY: ${SECRET_KEY}
                 
-           # ports:
-           #     - "5000:5000"
-            networks:
+        #    ports:
+        #       - "5000:5000"
+             networks:
                 - sfia2_network
             
             deploy:
