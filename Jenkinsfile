@@ -4,16 +4,27 @@ pipeline {
 
     stages {
 
-        stage("Start NGINX") {
+        stage("Inialize") {
 
             steps {
 
-                sh './scripts/startnginx.sh'
+                
+                sh './scripts/intialize.sh'
 
             }
 
         }
-        
+
+        stage("Start NGINX") {
+
+            steps {
+
+                sh './scripts/start_nginx.sh'
+
+            }
+
+        }
+
         // stage("Build Swarm") {
 
         //     steps {
@@ -28,7 +39,7 @@ pipeline {
         stage("Build Images") {
 
             steps {
-                sh 'chmod +x ./scripts/*.sh'
+
                 sh './scripts/build_images.sh'
 
             }
