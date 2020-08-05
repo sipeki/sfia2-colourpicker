@@ -2,6 +2,15 @@
 
     services:
 
+        Nginx:
+            image: nginx:latest  
+            ports: 
+                - ports: "80:80"
+            
+            networks:
+                - sfia2_network
+                
+
         Service_1:
             image: sipeki/service_1
             environment:
@@ -12,8 +21,8 @@
                 MYSQL_USER: ${MYSQL_USER}
                 SECRET_KEY: ${SECRET_KEY}
                 
-            ports:
-                - "5000:5000"
+           # ports:
+           #     - "5000:5000"
             networks:
                 - sfia2_network
             
