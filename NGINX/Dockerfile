@@ -6,4 +6,4 @@ RUN apt update -y
 
 RUN rm conf.d/default.conf
 RUN rm conf.d/reverse_proxy.conf
-COPY . conf.d/
+RUN COPY reverse_proxy.conf conf.d/

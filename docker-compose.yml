@@ -19,13 +19,11 @@
                 MYSQL_PASSWORD: ${MYSQL_PASSWORD}
                 MYSQL_PORT: ${MYSQL_PORT}
                 MYSQL_USER: ${MYSQL_USER}
-                SECRET_KEY: ${SECRET_KEY}
-                
+                SECRET_KEY: ${SECRET_KEY}    
         #    ports:
         #       - "5000:5000"
-             networks:
-                - sfia2_network
-            
+            networks:
+                - sfia2_network        
             deploy:
                 replicas: 2
     
@@ -54,5 +52,3 @@
         sfia2_network:
             driver: overlay
             name: sfia2_network  
-        
-            
