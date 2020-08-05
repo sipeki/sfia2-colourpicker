@@ -2,14 +2,14 @@
 
     services:
 
-        Nginx:
-            image: nginx:latest  
+        nginx:
+            image: sipeki/nginx  
             ports: 
-                - ports: "80:80"
-            
+                - ports: "80:80" 
             networks:
                 - sfia2_network
-                
+            deploy:
+                replicas: 3
 
         Service_1:
             image: sipeki/service_1
