@@ -4,14 +4,15 @@ pipeline {
 
     stages {
 
-        stage("Start NGINX")
+        stage("Start NGINX") {
 
             steps {
 
                 sh './scripts/startnginx.sh'
 
             }
-
+            
+        }
         stage("Build Swarm") {
 
             steps {
