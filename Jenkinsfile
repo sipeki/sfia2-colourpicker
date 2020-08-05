@@ -8,8 +8,8 @@ pipeline {
 
             steps {
 
-                
-                sh './scripts/intialize.sh'
+
+                sh 'chmod +x ./scripts/*.sh'
 
             }
 
