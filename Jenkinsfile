@@ -11,17 +11,19 @@ pipeline {
                 sh './scripts/startnginx.sh'
 
             }
-            
-        }
-        stage("Build Swarm") {
 
-            steps {
+        }
+        
+        // stage("Build Swarm") {
+
+        //     steps {
                 
-                // sh './scripts/ansible.sh'
+                
+        //         sh './scripts/ansible.sh'
 
-            }
+        //     }
 
-        }
+        // }
         
         stage("Build Images") {
 
