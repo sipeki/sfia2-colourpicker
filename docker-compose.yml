@@ -5,7 +5,7 @@
         nginx:
             image: sipeki/nginx  
             ports: 
-                - ports: "80:80" 
+                - "80:80" 
             networks:
                 - sfia2_network
             deploy:
