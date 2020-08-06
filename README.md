@@ -96,13 +96,15 @@ Ashy, Bleak, Blotchy, Brash, Chintzy, Cold, Colorless, Dark, Dim, Discolored, Dr
 Through API communicates to Service 2 for colour and Service 3 for generated text.
 
 
-Process design 
+### Process design 
 
-![Colour Picker: process](https://i.imgur.com/IW8DFxN.png)
+![Colour Picker process](https://i.imgur.com/IW8DFxN.png)
 
-ERD
+
+### ERD
 Table for storing presistely colours generated
-![Colours Picked: table]((https://i.imgur.com/QU4xmuE.jpg)
+
+![Colour Picker table](https://i.imgur.com/QU4xmuE.jpg)
 
 
 ### MoSCoW
