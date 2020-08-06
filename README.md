@@ -64,7 +64,7 @@ Project Proposal
 
 ## Overview of the Application
 
-![Colour Picker](https://imgur.com/Cx9idt4) 
+![Colour Picker](https://i.imgur.com/Cx9idt4.jpg) 
 Colour Picker. Press button to  generate colour and synonym combination for a descriptive colour.
 Colour chosen randomly from either list of basic primary or secondary colours. Synonym chosen randomly from a list of negative or positive synonyms.
 
@@ -98,11 +98,11 @@ Through API communicates to Service 2 for colour and Service 3 for generated tex
 
 Process design 
 
-![Colour Picker: process](https://imgur.com/IW8DFxN)
+![Colour Picker: process](https://i.imgur.com/IW8DFxN.png)
 
 ERD
 Table for storing presistely colours generated
-![Colours Picked: table](https://imgur.com/QU4xmuE)
+![Colours Picked: table]((https://i.imgur.com/QU4xmuE.jpg)
 
 
 ### MoSCoW
