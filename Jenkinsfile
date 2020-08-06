@@ -25,16 +25,16 @@ pipeline {
 
         }
 
-        // stage("Build Swarm") {
+        stage("Ansible Build Swarm") {
 
-        //     steps {
+            steps {
                 
                 
-        //         sh './scripts/ansible.sh'
+                sh './scripts/ansible.sh'
 
-        //     }
+            }
 
-        // }
+        }
         
         stage("Build Images") {
 

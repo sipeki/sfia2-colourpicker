@@ -1,6 +1,6 @@
---
+---
   - name: Install Docker-CE on Worker
-    hosts: sfia2_swarm_3
+    hosts: swarm-worker
     become: true
     roles:
       - docker-installation 
@@ -14,7 +14,7 @@
       - docker-swarm-init
   
   - name: Worker Join 
-    hosts: sfia2_swarm_3
+    hosts: swarm-worker
     become: true
-     roles:
+    roles:
       - docker-swarm-join
