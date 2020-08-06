@@ -65,6 +65,8 @@ Project Proposal
 ## Overview of the Application
 
 ![Colour Picker](https://i.imgur.com/Cx9idt4.jpg) 
+
+
 Colour Picker. Press button to  generate colour and synonym combination for a descriptive colour.
 Colour chosen randomly from either list of basic primary or secondary colours. Synonym chosen randomly from a list of negative or positive synonyms.
 
