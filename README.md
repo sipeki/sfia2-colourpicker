@@ -78,6 +78,9 @@ Renders single html dynamic webpage through Flask. On button pressed communicate
 
 
 #### Service 2 Colour
+
+Random selection of colour from either Basic or Secondary list
+
 Basic colours
 Red, Yellow, Blue, Yellow, White, Balck
 
@@ -85,6 +88,8 @@ Secondary colours
 Indigo, Magenta, Pink, Brown, Gray, Orange, Green, Violet, Purple, Silver, Gold, Platinum
 
 #### Service 3  Synonyms
+
+Random selection of synonm from either Positive or Negative list
 
 Words that Embrace Color:
 Ablaze, Beaming, Bold, Bright, Brilliant, Colorful, Dappled, Deep - Dark, Delicate, Electric, Festive, Fiery, Flamboyant, Flaming, Fresh, Glistening, Glittering, Glowing, Harmonious, Iridescent, Jazzy, Opalescent, Prismatic, Radiant, Sepia, Vibrant, Vivid
@@ -109,8 +114,8 @@ Table for storing presistely colours generated
 ![Colour Picker table](https://i.imgur.com/QU4xmuE.jpg)
 
 
-### MoSCoW
-Moscow prioritisation used required CRUD functionality
+### MoSCoW User Stories
+Moscow prioritisation usudo sed required CRUD functionality
 
 #### Must
 Initial functionality of the application is to show the current generated colour
@@ -126,3 +131,14 @@ Ansible to deploy environment
 #### Will not
 Generate colour from a table from a database rather than hard code into application.
 
+### Project Tracking
+Asana board used for tracking the project and organise the sprints
+
+#### Start
+![Imgur](https://i.imgur.com/SNgA2kJ.jpg)
+
+#### During Sprint
+![Imgur](https://i.imgur.com/gMsZNbw.jpg)
+
+#### End of current development cycle
+![Imgur](https://i.imgur.com/upZlzuH.jpg)
