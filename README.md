@@ -98,20 +98,11 @@ Through API communicates to Service 2 for colour and Service 3 for generated tex
 
 Process design 
 
-<diagram>
+![Colour Picker: process](https://imgur.com/IW8DFxN)
 
 ERD
 Table for storing presistely colours generated
-
-Stock 
-stock_id
-Int (auto Prime not null
-picked
-varchar(255) not null
-user
-varchar(255) not null
-ColourCreated
-Date stamp
+![Colours Picked: table](https://imgur.com/QU4xmuE)
 
 
 ### MoSCoW
