@@ -70,6 +70,22 @@ Project Proposal
 Colour Picker. Press button to  generate colour and synonym combination for a descriptive colour.
 Colour chosen randomly from either list of basic primary or secondary colours. Synonym chosen randomly from a list of negative or positive synonyms.
 
+### MoSCoW User Stories
+Moscow prioritisation usudo sed required CRUD functionality
+
+#### Must
+Initial functionality of the application is to show the current generated colour
+
+#### Should
+Record colours generated presistantly
+
+
+#### Could
+Reverse Proxy
+Ansible to deploy environment
+
+#### Will not
+Generate colour from a table from a database rather than hard code into application.
 
 ### Services 
 
@@ -103,33 +119,26 @@ Ashy, Bleak, Blotchy, Brash, Chintzy, Cold, Colorless, Dark, Dim, Discolored, Dr
 Through API communicates to Service 2 for colour and Service 3 for generated text.
 
 
+### Wireframe
+
+#### Colour Picker Sprint 1
+![Imgur](https://i.imgur.com/EipLQlE.png)
+
+### Colour Picker Sprint 3
+![Imgur](https://i.imgur.com/qdZirSD.png)
+
 ### Process design 
 
 ![Colour Picker process](https://i.imgur.com/IW8DFxN.png)
 
 
 ### ERD
-Table for storing presistely colours generated
+Table for storing presistely colours generated.
 
 ![Colour Picker table](https://i.imgur.com/QU4xmuE.jpg)
 
 
-### MoSCoW User Stories
-Moscow prioritisation usudo sed required CRUD functionality
 
-#### Must
-Initial functionality of the application is to show the current generated colour
-
-#### Should
-Record colours generated presistantly
-
-
-#### Could
-Reverse Proxy
-Ansible to deploy environment
-
-#### Will not
-Generate colour from a table from a database rather than hard code into application.
 
 ### Project Tracking
 Asana board used for tracking the project and organise the sprints
@@ -142,3 +151,9 @@ Asana board used for tracking the project and organise the sprints
 
 #### End of current development cycle
 ![Imgur](https://i.imgur.com/upZlzuH.jpg)
+
+
+## Deployment 
+
+### CI Pipeline
+![Imgur](https://i.imgur.com/oMX5DBy.png)
