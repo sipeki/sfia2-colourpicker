@@ -164,3 +164,10 @@ Asana board used for tracking the project and organise the sprints
 [Jenkins Pipeline](https://i.imgur.com/Rf3V0yd.png)
 
 - The deploy process is automated but requires DevOps configuration when it comes to security. Current understanding requires a manual Docker Login to authenticate Docker Swarm manager to Docker Hub. Otherwise permission denied when pushing images to Docker Hub will cause Jenkins run to fail. SSH logon on from Docker Swarm Manager host to Docker Swarm is also required for initial configuration to be set for when Asible carried out a SSH to join VM instance to Docker Swarm as a Worker.
+
+![Jenkins Pipeline webpage ](https://i.imgur.com/Kq3SsWa.jpg)
+
+### GITHUB Feature Branch Log
+![GITHUB Feature Branch Log](https://i.imgur.com/FBM0pnE.jpg)
+
+## Risk assessment
