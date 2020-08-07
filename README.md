@@ -153,11 +153,14 @@ Asana board used for tracking the project and organise the sprints
 
 ## Deployment 
 
-### CI Pipeline
+### CI Pipeline and DevOps Tools
 
-![CI Pipeline](https://i.imgur.com/MyHlTzJ.png)
+![CI Pipeline](https://i.imgur.com/Eic4LHU.png)
 - Micro Services architecture makes full use of the CI. The automated deployment of service updates to the environment is initiated by a source code update to the GitHib repository. Webhook initiates the Jenkins Pipeline. 
 
 - Alternative method was first implemented for deployment of the Docker Swarm. That was to have Docker Hub create the images for the microservices and the Jenkins to pull those images to deploy Docker Swarm. The issue with this approach is that the building of images is not instant. Once a commit has been pushed to GitHub Jenkins would start a time to wait 10 minutes. It is not certain that a Docker hub would do the build of the image within 10 minutes. Even if time was not an issue uncertainty in a computing environment runs a higher risk of failure of the pipeline. The changes pushed to the Git repository managed by Github that automatically propagates to Jenkins using webhook is a robust and better method.
 
 ### Jenkins Pipeline
+[Jenkins Pipeline](https://i.imgur.com/Rf3V0yd.png)
+
+- The deploy process is automated but requires DevOps configuration when it comes to security. Current understanding requires a manual Docker Login to authenticate Docker Swarm manager to Docker Hub. Otherwise permission denied when pushing images to Docker Hub will cause Jenkins run to fail. SSH logon on from Docker Swarm Manager host to Docker Swarm is also required for initial configuration to be set for when Asible carried out a SSH to join VM instance to Docker Swarm as a Worker.

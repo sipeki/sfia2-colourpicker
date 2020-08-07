@@ -8,6 +8,4 @@
     docker service update --image sipeki/service_1:latest --force sfia2_Service_1
     docker service update --image sipeki/nginx:latest --force sfia2_NGINX
     
-    # remove orphaned containers and services
 
-    docker system prune -f
