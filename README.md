@@ -122,10 +122,10 @@ Through API communicates to Service 2 for colour and Service 3 for generated tex
 ### Wireframe
 
 #### Colour Picker Sprint 1
-![Imgur](https://i.imgur.com/EipLQlE.png)
+![Colour Picker Sprint 1](https://i.imgur.com/EipLQlE.png)
 
 ### Colour Picker Sprint 3
-![Imgur](https://i.imgur.com/qdZirSD.png)
+![Colour Picker Sprint 3](https://i.imgur.com/qdZirSD.png)
 
 ### Process design 
 
@@ -138,22 +138,22 @@ Table for storing presistely colours generated.
 ![Colour Picker table](https://i.imgur.com/QU4xmuE.jpg)
 
 
-
-
 ### Project Tracking
 Asana board used for tracking the project and organise the sprints
 
 #### Start
-![Imgur](https://i.imgur.com/gMsZNbw.jpg)
+![Project Tracking Start](https://i.imgur.com/gMsZNbw.jpg)
 
 #### During Sprint
-![Imgur](https://i.imgur.com/SNgA2kJ.jpg)
+![Project Tracking During Sprint](https://i.imgur.com/SNgA2kJ.jpg)
 
 #### End of current development cycle
-![Imgur](https://i.imgur.com/upZlzuH.jpg)
+![Project Racking end ](https://i.imgur.com/upZlzuH.jpg)
 
 
 ## Deployment 
 
 ### CI Pipeline
-![Imgur](https://i.imgur.com/oMX5DBy.png)
+![CI Pipeline](https://i.imgur.com/9rRoQCH.jpg)
+
+### Jenkins Workflow
