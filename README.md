@@ -187,3 +187,13 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 - Skin the website to be more visually appealing.
 -Micro service that has been modified will have its Docker image regenerated and the Micros Service update in the swarm.
 - Run the database for persistent data as a part of the Socker Swarm
+
+# Retrospective
+
+- When everything is as it should be and the micro service still does not run means that there is a fundamental issue with the declarations before the function is declared.
+- Solo work is a slower process rather than in groups.
+- A secure implementation requires DevOps to carry out manual tasks.
+- Containerization provides a flexible method to roll out micro services without over head of setting up new hardware. It is elastic.
+- It was difficult to visualise how the application was to be developed as I technologies frameworks and concepts were unknown.
+- Devops, cloud computing, containerisation, micro services is perfect symbiosis.
+
