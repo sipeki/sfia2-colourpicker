@@ -7,25 +7,20 @@ Simon Kindlen, DevOps and Cloud Consultant, QA
 
 ![Simon kindlen](https://i.imgur.com/DAaZve5.jpg)
 
-
 Introduction
 
 >Introduction: In the next 10 to minutes you will be taken through my project for SFIA2. Demonstrating the technologies learnt in the last 3 weeks on developing an application based on micro services architecture.  
 
-
-
-### Resources
-
+## Resources
 
 Asana Storyboard: https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033118f395ec2face3a1e5db5949
 
-
-# Content
+## Content
 
 * Project Brief
-    * Requirements
-    * Technologies
-    * Overview
+ * Requirements
+ * Technologies
+* Overview
 
 * Story Board
 * Risk Assessment
@@ -140,6 +135,7 @@ Table for storing presistely colours generated.
 
 ### Project Tracking
 Asana board used for tracking the project and organise the sprints
+https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033118f395ec2face3a1e5db5949
 
 #### Start
 ![Project Tracking Start](https://i.imgur.com/gMsZNbw.jpg)
@@ -171,3 +167,4 @@ Asana board used for tracking the project and organise the sprints
 ![GITHUB Feature Branch Log](https://i.imgur.com/FBM0pnE.jpg)
 
 ## Risk assessment
+![Risk assessment](https://i.imgur.com/YEXfiYP.jpg)
