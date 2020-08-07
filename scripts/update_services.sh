@@ -6,6 +6,6 @@
     docker service update --image sipeki/service_2:latest --force sfia2_Service_2
     docker service update --image sipeki/service_3:latest --force sfia2_Service_3
     docker service update --image sipeki/service_1:latest --force sfia2_Service_1
-    docker service update --image sipeki/nginx:latest --force sfia2_NGINX
+    docker service update --image sipeki/nginx:latest --force sfia2_nginx
     
 
