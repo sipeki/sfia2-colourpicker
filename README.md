@@ -45,7 +45,7 @@ Asana Storyboard: https://app.asana.com/share/kindlen/sfia2-colour-picker/118632
 * Containerisation and orchestration for micro services deployment
 * Ansible Playbook that will provision the environment that your application needs to run.
 
-## The Technologies Stack
+# #The Technologies Stack
 * Asana: Kanban Board
 * Git: Version Control
 * Jenkins: CI Server 
@@ -55,7 +55,7 @@ Asana Storyboard: https://app.asana.com/share/kindlen/sfia2-colour-picker/118632
 * Docker Swarm: Orchestration Tool: 
 * NGINX: Reverse proxy and load balancing
 
-Project Proposal
+#Project Proposal
 
 ## Overview of the Application
 
@@ -65,30 +65,30 @@ Project Proposal
 Colour Picker. Press button to  generate colour and synonym combination for a descriptive colour.
 Colour chosen randomly from either list of basic primary or secondary colours. Synonym chosen randomly from a list of negative or positive synonyms.
 
-### MoSCoW User Stories
+## MoSCoW User Stories & Sprints
 Moscow prioritisation usudo sed required CRUD functionality
 
-#### Must
+### Must Sprint
 Initial functionality of the application is to show the current generated colour
 
-#### Should
+### Should Sprint
 Record colours generated presistantly
 
 
-#### Could
+### Could Sprint
 Reverse Proxy
 Ansible to deploy environment
 
-#### Will not
+### Will not
 Generate colour from a table from a database rather than hard code into application.
 
 ### Services 
 
-#### Service 1 
+### Service 1 
 Renders single html dynamic webpage through Flask. On button pressed communicates through an API to service 4 for colour picked.Inserts value into a database and displays on web page.
 
 
-#### Service 2 Colour
+### Service 2 Colour
 
 Random selection of colour from either Basic or Secondary list
 
@@ -98,7 +98,7 @@ Red, Yellow, Blue, Yellow, White, Balck
 Secondary colours
 Indigo, Magenta, Pink, Brown, Gray, Orange, Green, Violet, Purple, Silver, Gold, Platinum
 
-#### Service 3  Synonyms
+### Service 3  Synonyms
 
 Random selection of synonm from either Positive or Negative list
 
@@ -110,66 +110,66 @@ OR
 Color Words with Negative Connotations:
 Ashy, Bleak, Blotchy, Brash, Chintzy, Cold, Colorless, Dark, Dim, Discolored, Drab, Harsh, Loud, Muddy, Opaque, Saturated, Showy, Sickly, Somber, Sooty, Splashy, Stained, Uneven, Washed-out, Watery
 
-#### Service 4
+### Service 4
 Through API communicates to Service 2 for colour and Service 3 for generated text.
 
 
-### Wireframe
+## Wireframe
 
-#### Colour Picker Sprint 1
+### Colour Picker Sprint 1
 ![Colour Picker Sprint 1](https://i.imgur.com/EipLQlE.png)
 
 ### Colour Picker Sprint 3
 ![Colour Picker Sprint 3](https://i.imgur.com/qdZirSD.png)
 
-### Process design 
+## Process design 
 
 ![Colour Picker process](https://i.imgur.com/IW8DFxN.png)
 
 
-### ERD
+## ERD
 Table for storing presistely colours generated.
 
 ![Colour Picker table](https://i.imgur.com/QU4xmuE.jpg)
 
 
-### Project Tracking
+## Project Tracking
 Asana board used for tracking the project and organise the sprints
 https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033118f395ec2face3a1e5db5949
 
-#### Start
+### Start
 ![Project Tracking Start](https://i.imgur.com/gMsZNbw.jpg)
 
-#### During Sprint
+### During Sprint
 ![Project Tracking During Sprint](https://i.imgur.com/SNgA2kJ.jpg)
 
-#### End of current development cycle
+### End of current development cycle
 ![Project Racking end ](https://i.imgur.com/upZlzuH.jpg)
 
 
-## Deployment 
+# Deployment 
 
-### CI Pipeline and DevOps Tools
+## CI Pipeline and DevOps Tools
 
 ![CI Pipeline](https://i.imgur.com/Eic4LHU.png)
 - Micro Services architecture makes full use of the CI. The automated deployment of service updates to the environment is initiated by a source code update to the GitHib repository. Webhook initiates the Jenkins Pipeline. 
 
 - Alternative method was first implemented for deployment of the Docker Swarm. That was to have Docker Hub create the images for the microservices and the Jenkins to pull those images to deploy Docker Swarm. The issue with this approach is that the building of images is not instant. Once a commit has been pushed to GitHub Jenkins would start a time to wait 10 minutes. It is not certain that a Docker hub would do the build of the image within 10 minutes. Even if time was not an issue uncertainty in a computing environment runs a higher risk of failure of the pipeline. The changes pushed to the Git repository managed by Github that automatically propagates to Jenkins using webhook is a robust and better method.
 
-### Jenkins Pipeline
+## Jenkins Pipeline
 [Jenkins Pipeline](https://i.imgur.com/Rf3V0yd.png)
 
 - The deploy process is automated but requires DevOps configuration when it comes to security. Current understanding requires a manual Docker Login to authenticate Docker Swarm manager to Docker Hub. Otherwise permission denied when pushing images to Docker Hub will cause Jenkins run to fail. SSH logon on from Docker Swarm Manager host to Docker Swarm is also required for initial configuration to be set for when Asible carried out a SSH to join VM instance to Docker Swarm as a Worker.
 
 ![Jenkins Pipeline webpage ](https://i.imgur.com/Kq3SsWa.jpg)
 
-### GITHUB Feature Branch Log
+## GITHUB Feature Branch Log
 ![GITHUB Feature Branch Log](https://i.imgur.com/FBM0pnE.jpg)
 
-## Risk assessment
+# Risk assessment
 ![Risk assessment](https://i.imgur.com/YEXfiYP.jpg)
 
-## Best Practices & Security
+# Best Practices & Security
 
 - Due to the public nature of Github it is important to upload public ip addresses, database connection details and ports. 
  - No unique variables used to access the VM and SQl instances  set in the OS environment.
@@ -179,3 +179,11 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 - Test and compile a list of required packages to be installed for the micros services at each sprint epoch epic by running the services locally from the terminal by creating a virtual environment with Python Venv. 
 - To stop cached files be pushed to github and docker hub create .gitignore and .dockerignore 
 
+# Future Implementation
+
+- Database for table of synonyms and colours. Enabling users to add their own colour and synonyms.
+- Record user name and mood they are in at that moment. The mood will set what type of synonym to combine with colour.
+- Visualize the colour generated.
+- Skin the website to be more visually appealing.
+-Micro service that has been modified will have its Docker image regenerated and the Micros Service update in the swarm.
+- Run the database for persistent data as a part of the Socker Swarm
