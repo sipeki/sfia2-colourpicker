@@ -135,10 +135,10 @@ Generate colour from a table from a database rather than hard code into applicat
 Asana board used for tracking the project and organise the sprints
 
 #### Start
-![Imgur](https://i.imgur.com/SNgA2kJ.jpg)
+![Imgur](https://i.imgur.com/gMsZNbw.jpg)
 
 #### During Sprint
-![Imgur](https://i.imgur.com/gMsZNbw.jpg)
+![Imgur](https://i.imgur.com/SNgA2kJ.jpg)
 
 #### End of current development cycle
 ![Imgur](https://i.imgur.com/upZlzuH.jpg)
