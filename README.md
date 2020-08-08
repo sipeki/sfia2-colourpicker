@@ -55,18 +55,17 @@ Asana Storyboard: https://app.asana.com/share/kindlen/sfia2-colour-picker/118632
 * Docker Swarm: Orchestration Tool: 
 * NGINX: Reverse proxy and load balancing
 
-#Project Proposal
+# Project Proposal
 
 ## Overview of the Application
 
 ![Colour Picker](https://i.imgur.com/Cx9idt4.jpg) 
 
-
 Colour Picker. Press button to  generate colour and synonym combination for a descriptive colour.
 Colour chosen randomly from either list of basic primary or secondary colours. Synonym chosen randomly from a list of negative or positive synonyms.
 
 ## MoSCoW User Stories & Sprints
-Moscow prioritisation usudo sed required CRUD functionality
+Moscow prioritisation for project prioritization for functionality.
 
 ### Must Sprint
 Initial functionality of the application is to show the current generated colour
@@ -129,8 +128,7 @@ Through API communicates to Service 2 for colour and Service 3 for generated tex
 
 ## ERD
 Table for storing presistely colours generated.
-
-![Colour Picker table](https://i.imgur.com/QU4xmuE.jpg)
+![Colour Picker table](hhttps://i.imgur.com/YWsAfN5.png)
 
 
 ## Project Tracking
