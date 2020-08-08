@@ -167,7 +167,7 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 ![GITHUB Feature Branch Log](https://i.imgur.com/FBM0pnE.jpg)
 
 # Risk assessment
-![Risk assessment](https://i.imgur.com/YEXfiYP.jpg)
+![Risk assessment](https://i.imgur.com/TYOpR9c.jpg)
 
 # Best Practices & Security
 
@@ -190,11 +190,13 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 
 # Retrospective
 
-- When everything is as it should be and the micro service still does not run means that there is a fundamental issue with the declarations before the function is declared.
-- Solo work is a slower process rather than in groups.
-- A secure implementation requires DevOps to carry out manual tasks. .SSH Docker Login
-- Containerization provides a flexible method to roll out micro services without overhead of setting up box. It is elastic.
-- It was difficult to visualise how the application was to be developed as I technologies frameworks and concepts were unknown.
-- Devops, cloud computing, containerisation, micro services are perfect symbiosis.
+When everything is as it should be and the micro service still does not run means that there is a fundamental issue with the declarations before the function is declared.
+Solo work is a slower process rather than in groups.
+A secure implementation requires DevOps to carry out manual tasks. .SSH Docker Login
+Containerization provides a flexible method to roll out micro services without overhead of setting up box. It is elastic.
+It was difficult to visualise how the application was to be developed as I technologies frameworks and concepts were unknown.
+Devops, cloud computing, containerisation, micro services are perfect symbiosis.
+Containers are immutable. No longer have to provide root access to the box..
+
 
 > Author: Simon Kindlen
