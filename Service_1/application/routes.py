@@ -45,8 +45,7 @@ class colours_picked(db.Model):
 
 @app.route('/', methods=['GET'])
 def home():
-    # response = requests.get('http://localhost:5003/colourpicker')
-
+   
     response = requests.get('http://service_4:5003/colourpicker')
     
     colourpicked = response.text

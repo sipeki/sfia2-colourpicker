@@ -189,9 +189,9 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 # Best Practices & Security
 
 * Due to the public nature of Github it is important not to upload public ip addresses, database connection details and ports. 
- * No unique variables used to access the VM and SQL instances  set in the OS environment.
- * Hide ports by configure NGINX to port forward to the API host ports
- * Host ip addresses set in Hosts file for Docker Swarm Worker
+* No unique variables used to access the VM and SQL instances  set in the OS environment.
+* Hide ports by configure NGINX to port forward to the API host ports
+* Host ip addresses set in Hosts file for Docker Swarm Worker
 * Manually test all stages in Jenkins by running the pipeline stages as Jenkins user from Docker Swarm Manager the terminal
 * Test and compile a list of required packages to be installed for the micros services at each sprint epoch epic by running the services locally from the terminal by creating a virtual environment with Python Venv. 
 * To stop cached files be pushed to github and docker hub create .gitignore and .dockerignore 
