@@ -128,7 +128,7 @@ Through API communicates to Service 2 for colour and Service 3 for generated tex
 
 ## ERD
 Table for storing presistely colours generated.
-![Colour Picker table](hhttps://i.imgur.com/YWsAfN5.png)
+![Colour Picker table](https://i.imgur.com/YWsAfN5.png)
 
 
 ## Project Tracking
