@@ -9,28 +9,32 @@ Simon Kindlen, DevOps and Cloud Consultant, QA
 
 Introduction
 
->Introduction: In the next 10 to minutes you will be taken through my project for SFIA2. Demonstrating the technologies learnt in the last 3 weeks on developing an application based on micro services architecture.  
+> Introduction: In the next 10 to minutes you will be taken through my project for SFIA2. Demonstrating the technologies learnt in the last 3 weeks on developing an application based on micro services architecture.  
+> Resources
+> Asana Storyboard: 
+https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033118f395ec2face3a1e5db5949
 
-## Resources
-
-Asana Storyboard: https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033118f395ec2face3a1e5db5949
-
-## Content
+# Contents
 
 * Project Brief
- * Requirements
- * Technologies
-* Overview
-
-* Story Board
-* Risk Assessment
+  * Requirements
+  * Technologies
 * Project Proposal
-* Application
-    * Process
-    * ERD
+  * Overview of the Application
+  * MoSCoW User Stories & Sprints
+  * Services
+  * Wireframe
+  * Logic
+  * ERD
+* Project Tracking
 * Deployment
-* Security
-* Improvements
+  * CI Pipeline and DevOps Tools
+  * Jenkins Pipline
+  * GitHUB Feature Branch Log
+* Risk Assessment
+* Best Practices & Security
+* Future Implementation
+* Retrospective
 
 ------
 
@@ -45,7 +49,8 @@ Asana Storyboard: https://app.asana.com/share/kindlen/sfia2-colour-picker/118632
 * Containerisation and orchestration for micro services deployment
 * Ansible Playbook that will provision the environment that your application needs to run.
 
-# #The Technologies Stack
+## The Technologies Stack
+
 * Asana: Kanban Board
 * Git: Version Control
 * Jenkins: CI Server 
@@ -65,27 +70,31 @@ Colour Picker. Press button to  generate colour and synonym combination for a de
 Colour chosen randomly from either list of basic primary or secondary colours. Synonym chosen randomly from a list of negative or positive synonyms.
 
 ## MoSCoW User Stories & Sprints
+
 Moscow prioritisation for project prioritization for functionality.
 
 ### Must Sprint
+
 Initial functionality of the application is to show the current generated colour
 
 ### Should Sprint
+
 Record colours generated presistantly
 
-
 ### Could Sprint
+
 Reverse Proxy
 Ansible to deploy environment
 
 ### Will not
+
 Generate colour from a table from a database rather than hard code into application.
 
-### Services 
+### Services
 
-### Service 1 
+### Service 1
+
 Renders single html dynamic webpage through Flask. On button pressed communicates through an API to service 4 for colour picked.Inserts value into a database and displays on web page.
-
 
 ### Service 2 Colour
 
@@ -110,35 +119,41 @@ Color Words with Negative Connotations:
 Ashy, Bleak, Blotchy, Brash, Chintzy, Cold, Colorless, Dark, Dim, Discolored, Drab, Harsh, Loud, Muddy, Opaque, Saturated, Showy, Sickly, Somber, Sooty, Splashy, Stained, Uneven, Washed-out, Watery
 
 ### Service 4
-Through API communicates to Service 2 for colour and Service 3 for generated text.
 
+Through API communicates to Service 2 for colour and Service 3 for generated text.
 
 ## Wireframe
 
 ### Colour Picker Sprint 1
+
 ![Colour Picker Sprint 1](https://i.imgur.com/EipLQlE.png)
 
 ### Colour Picker Sprint 3
+
 ![Colour Picker Sprint 3](https://i.imgur.com/qdZirSD.png)
 
-## Process design 
+## Logic
 
 ![Colour Picker process](https://i.imgur.com/IW8DFxN.png)
 
-
 ## ERD
+
 Table for storing presistely colours generated.
+
 ![Colour Picker table](https://i.imgur.com/YWsAfN5.png)
 
-
 ## Project Tracking
+
 Asana board used for tracking the project and organise the sprints
+
 https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033118f395ec2face3a1e5db5949
 
 ### Start
+
 ![Project Tracking Start](https://i.imgur.com/gMsZNbw.jpg)
 
 ### During Sprint
+
 ![Project Tracking During Sprint](https://i.imgur.com/SNgA2kJ.jpg)
 
 ### End of current development cycle
@@ -150,21 +165,25 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 ## CI Pipeline and DevOps Tools
 
 ![CI Pipeline](https://i.imgur.com/Eic4LHU.png)
-- Micro Services architecture makes full use of the CI. The automated deployment of service updates to the environment is initiated by a source code update to the GitHib repository. Webhook initiates the Jenkins Pipeline. 
 
-- Alternative method was first implemented for deployment of the Docker Swarm. That was to have Docker Hub create the images for the microservices and the Jenkins to pull those images to deploy Docker Swarm. The issue with this approach is that the building of images is not instant. Once a commit has been pushed to GitHub Jenkins would start a time to wait 10 minutes. It is not certain that a Docker hub would do the build of the image within 10 minutes. Even if time was not an issue uncertainty in a computing environment runs a higher risk of failure of the pipeline. The changes pushed to the Git repository managed by Github that automatically propagates to Jenkins using webhook is a robust and better method.
+-Micro Services architecture makes full use of the CI. The automated deployment of service updates to the environment is initiated by a source code update to the GitHib repository. Webhook initiates the Jenkins Pipeline. 
+
+-Alternative method was first implemented for deployment of the Docker Swarm. That was to have Docker Hub create the images for the microservices and the Jenkins to pull those images to deploy Docker Swarm. The issue with this approach is that the building of images is not instant. Once a commit has been pushed to GitHub Jenkins would start a time to wait 10 minutes. It is not certain that a Docker hub would do the build of the image within 10 minutes. Even if time was not an issue uncertainty in a computing environment runs a higher risk of failure of the pipeline. The changes pushed to the Git repository managed by Github that automatically propagates to Jenkins using webhook is a robust and better method.
 
 ## Jenkins Pipeline
+
 [Jenkins Pipeline](https://i.imgur.com/Rf3V0yd.png)
 
-- The deploy process is automated but requires DevOps configuration when it comes to security. Current understanding requires a manual Docker Login to authenticate Docker Swarm manager to Docker Hub. Otherwise permission denied when pushing images to Docker Hub will cause Jenkins run to fail. SSH logon on from Docker Swarm Manager host to Docker Swarm is also required for initial configuration to be set for when Asible carried out a SSH to join VM instance to Docker Swarm as a Worker.
+-The deploy process is automated but requires DevOps configuration when it comes to security. Current understanding requires a manual Docker Login to authenticate Docker Swarm manager to Docker Hub. Otherwise permission denied when pushing images to Docker Hub will cause Jenkins run to fail. SSH logon on from Docker Swarm Manager host to Docker Swarm is also required for initial configuration to be set for when Asible carried out a SSH to join VM instance to Docker Swarm as a Worker.
 
 ![Jenkins Pipeline webpage ](https://i.imgur.com/Kq3SsWa.jpg)
 
-## GITHUB Feature Branch Log
+# GITHUB Feature Branch Log
+
 ![GITHUB Feature Branch Log](https://i.imgur.com/FBM0pnE.jpg)
 
-# Risk assessment
+# Risk Assessment
+
 ![Risk assessment](https://i.imgur.com/TYOpR9c.jpg)
 
 # Best Practices & Security
