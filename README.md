@@ -43,8 +43,7 @@ Introduction
 ## Requirements
 
 * An Asana board (or equivalent Kanban board tech) with full expansion on tasks needed to complete the project.
-* An Application fully integrated using the Feature-Branch model into a Version Control System which will subsequently be built through a 
-* CI server and deployed to a cloud-based virtual machine.
+* An Application fully integrated using the Feature-Branch model into a Version Control System which will subsequently be built through a CI server and deployed to a cloud-based virtual machine instance.
 * Webhooks should be used for Jenkins to automatically recreate and redeploy micro services when changes made to the code base
 * Service-oriented architecture rather than monolithic design
 * Containerisation and orchestration for micro services deployment
