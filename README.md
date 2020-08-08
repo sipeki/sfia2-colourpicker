@@ -52,12 +52,12 @@ Introduction
 ## The Technologies Stack
 
 * Asana: Kanban Board
-* Git: Version Control
+* Github: Version Control
 * Jenkins: CI Server 
 * Ansible Playbook: Provision of application environment
 * GCP: Virtual machine and database
 * Docker: Containerisation:
-* Docker Swarm: Orchestration Tool: 
+* Docker Swarm: Orchestration Tool
 * NGINX: Reverse proxy and load balancing
 
 # Project Proposal
@@ -94,7 +94,7 @@ Generate colour from a table from a database rather than hard code into applicat
 
 ### Service 1
 
-Renders single html dynamic webpage through Flask. On button pressed communicates through an API to service 4 for colour picked.Inserts value into a database and displays on web page.
+Renders single html dynamic webpage through Flask. On button pressed communicates through an API to service 4 for colour picked. Inserts value into a database and displays on web page.
 
 ### Service 2 Colour
 
@@ -120,7 +120,7 @@ Ashy, Bleak, Blotchy, Brash, Chintzy, Cold, Colorless, Dark, Dim, Discolored, Dr
 
 ### Service 4
 
-Through API communicates to Service 2 for colour and Service 3 for generated text.
+Through API communicates to Service 2 random colour and Service 3 rando synonym for generated text.
 
 ## Wireframe
 
@@ -174,7 +174,7 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 
 [Jenkins Pipeline](https://i.imgur.com/Rf3V0yd.png)
 
--The deploy process is automated but requires DevOps configuration when it comes to security. Current understanding requires a manual Docker Login to authenticate Docker Swarm manager to Docker Hub. Otherwise permission denied when pushing images to Docker Hub will cause Jenkins run to fail. SSH logon on from Docker Swarm Manager host to Docker Swarm is also required for initial configuration to be set for when Asible carried out a SSH to join VM instance to Docker Swarm as a Worker.
+* The deploy process is automated but requires DevOps configuration when it comes to security. Current understanding requires a manual Docker Login to authenticate Docker Swarm manager to Docker Hub. Otherwise permission denied when pushing images to Docker Hub will cause Jenkins run to fail. SSH logon on from Docker Swarm Manager host to Docker Swarm is also required for initial configuration to be set for when Ansible carried out a SSH to join VM instance to Docker Swarm as a Worker.
 
 ![Jenkins Pipeline webpage ](https://i.imgur.com/Kq3SsWa.jpg)
 
@@ -188,8 +188,8 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 
 # Best Practices & Security
 
-* Due to the public nature of Github it is important to upload public ip addresses, database connection details and ports. 
- * No unique variables used to access the VM and SQl instances  set in the OS environment.
+* Due to the public nature of Github it is important not to upload public ip addresses, database connection details and ports. 
+ * No unique variables used to access the VM and SQL instances  set in the OS environment.
  * Hide ports by configure NGINX to port forward to the API host ports
  * Host ip addresses set in Hosts file for Docker Swarm Worker
 * Manually test all stages in Jenkins by running the pipeline stages as Jenkins user from Docker Swarm Manager the terminal
@@ -202,8 +202,8 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 * Record user name and mood they are in at that moment. The mood will set what type of synonym to combine with colour.
 * Visualize the colour generated.
 * Skin the website to be more visually appealing.
-* Micro service that has been modified will have its Docker image regenerated and the Micros Service update in the swarm.
-* Run the database for persistent data as a part of the Socker Swarm
+* Only update the micro service that's source code has been modified rather than all micro services when a weebhook is detected.
+* Run the database for persistent data as a part of the Docker Swarm.
 
 # Retrospective
 
@@ -214,6 +214,5 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 * It was difficult to visualise how the application was to be developed as I technologies frameworks and concepts were unknown.
 * Devops, cloud computing, containerisation, micro services are perfect symbiosis.
 * Containers are immutable. No longer have to provide root access to the box Reduced attach surface with less vectors.
-
 
 > Author: Simon Kindlen
