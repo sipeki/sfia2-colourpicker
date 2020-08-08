@@ -171,32 +171,32 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 
 # Best Practices & Security
 
-- Due to the public nature of Github it is important to upload public ip addresses, database connection details and ports. 
- - No unique variables used to access the VM and SQl instances  set in the OS environment.
- - Hide ports by configure NGINX to port forward to the API host ports
- - Host ip addresses set in Hosts file for Docker Swarm Worker
-- Manually test all stages in Jenkins by running the pipeline stages as Jenkins user from Docker Swarm Manager the terminal
-- Test and compile a list of required packages to be installed for the micros services at each sprint epoch epic by running the services locally from the terminal by creating a virtual environment with Python Venv. 
-- To stop cached files be pushed to github and docker hub create .gitignore and .dockerignore 
+* Due to the public nature of Github it is important to upload public ip addresses, database connection details and ports. 
+ * No unique variables used to access the VM and SQl instances  set in the OS environment.
+ * Hide ports by configure NGINX to port forward to the API host ports
+ * Host ip addresses set in Hosts file for Docker Swarm Worker
+* Manually test all stages in Jenkins by running the pipeline stages as Jenkins user from Docker Swarm Manager the terminal
+* Test and compile a list of required packages to be installed for the micros services at each sprint epoch epic by running the services locally from the terminal by creating a virtual environment with Python Venv. 
+* To stop cached files be pushed to github and docker hub create .gitignore and .dockerignore 
 
 # Future Implementation
 
-- Database for table of synonyms and colours. Enabling users to add their own colour and synonyms.
-- Record user name and mood they are in at that moment. The mood will set what type of synonym to combine with colour.
-- Visualize the colour generated.
-- Skin the website to be more visually appealing.
--Micro service that has been modified will have its Docker image regenerated and the Micros Service update in the swarm.
-- Run the database for persistent data as a part of the Socker Swarm
+* Database for table of synonyms and colours. Enabling users to add their own colour and synonyms.
+* Record user name and mood they are in at that moment. The mood will set what type of synonym to combine with colour.
+* Visualize the colour generated.
+* Skin the website to be more visually appealing.
+* Micro service that has been modified will have its Docker image regenerated and the Micros Service update in the swarm.
+* Run the database for persistent data as a part of the Socker Swarm
 
 # Retrospective
 
-When everything is as it should be and the micro service still does not run means that there is a fundamental issue with the declarations before the function is declared.
-Solo work is a slower process rather than in groups.
-A secure implementation requires DevOps to carry out manual tasks. .SSH Docker Login
-Containerization provides a flexible method to roll out micro services without overhead of setting up box. It is elastic.
-It was difficult to visualise how the application was to be developed as I technologies frameworks and concepts were unknown.
-Devops, cloud computing, containerisation, micro services are perfect symbiosis.
-Containers are immutable. No longer have to provide root access to the box..
+* When everything is as it should be and the micro service still does not run means that there is a fundamental issue with the declarations before the function is declared.
+* Solo work is a slower process rather than in groups.
+* A secure implementation requires DevOps to carry out manual tasks. .SSH Docker Login
+* Containerization provides a flexible method to roll out micro services without overhead of setting up box. It is elastic.
+* It was difficult to visualise how the application was to be developed as I technologies frameworks and concepts were unknown.
+* Devops, cloud computing, containerisation, micro services are perfect symbiosis.
+* Containers are immutable. No longer have to provide root access to the box Reduced attach surface with less vectors.
 
 
 > Author: Simon Kindlen
