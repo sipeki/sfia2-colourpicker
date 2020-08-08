@@ -196,3 +196,5 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 - Containerization provides a flexible method to roll out micro services without overhead of setting up box. It is elastic.
 - It was difficult to visualise how the application was to be developed as I technologies frameworks and concepts were unknown.
 - Devops, cloud computing, containerisation, micro services are perfect symbiosis.
+
+> Author: Simon Kindlen
