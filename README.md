@@ -83,7 +83,8 @@ Record colours generated presistantly
 
 ### Could Sprint
 
-Reverse Proxy
+Reverse Proxy NGINX
+
 Ansible to deploy environment
 
 ### Will not
