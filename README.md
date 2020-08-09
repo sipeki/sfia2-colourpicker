@@ -172,7 +172,7 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 
 ## Jenkins Pipeline
 
-[Jenkins Pipeline](https://i.imgur.com/Rf3V0yd.png)
+![Jenkins Pipeline](https://i.imgur.com/Rf3V0yd.png)
 
 * The deploy process is automated but requires DevOps configuration when it comes to security. Current understanding requires a manual Docker Login to authenticate Docker Swarm manager to Docker Hub when the manager is initially setup. Otherwise permission denied when pushing images to Docker Hub will cause Jenkins run to fail. SSH logon on from Docker Swarm Manager host to Docker Swarm is also required for initial configuration to be set for when Ansible carried out a SSH to join VM instance to Docker Swarm as a Worker. SSh needs to be setup for Jenkins user as well.
 
