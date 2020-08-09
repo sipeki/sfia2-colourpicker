@@ -59,6 +59,7 @@ Introduction
 * Docker: Containerisation:
 * Docker Swarm: Orchestration Tool
 * NGINX: Reverse proxy and load balancing
+* IDE: Microsoft Visual Studio
 
 # Project Proposal
 
