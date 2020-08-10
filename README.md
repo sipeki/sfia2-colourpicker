@@ -122,7 +122,7 @@ Ashy, Bleak, Blotchy, Brash, Chintzy, Cold, Colorless, Dark, Dim, Discolored, Dr
 
 ### Service 4
 
-Through API communicates to Service 2 random colour and Service 3 randm synonym for generated text.
+Through API communicates to Service 2 random colour and Service 3 random synonym for generated text.
 
 ## Wireframe
 
