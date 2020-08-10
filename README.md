@@ -53,7 +53,7 @@ Introduction
 
 * Asana: Kanban Board
 * Github: Version Control
-* Jenkins: CI Server 
+* Jenkins: CI Server
 * Ansible Playbook: Provision of application environment
 * GCP: Virtual machine and database
 * Docker: Containerisation:
@@ -160,7 +160,6 @@ https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033
 
 ### End of current development cycle
 ![Project Racking end ](https://i.imgur.com/upZlzuH.jpg)
-
 
 # Deployment 
 
