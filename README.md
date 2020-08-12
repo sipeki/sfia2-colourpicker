@@ -9,7 +9,7 @@ Simon Kindlen, DevOps and Cloud Consultant, QA
 
 Introduction
 
-> Introduction: In the next 10 to 15 minutes you will be taken through my project for SFIA2. Demonstrating the technologies learnt in the last 3 weeks on developing an application based on micro services architecture.  
+> Introduction: In the next 20 to 25 minutes you will be taken through my project for SFIA2. Demonstrating the technologies learnt in the last 3 weeks on developing an application based on micro services architecture.  
 
 >Resources
 >Asana Storyboard: https://app.asana.com/share/kindlen/sfia2-colour-picker/1186329697660093/a8fb033118f395ec2face3a1e5db5949
