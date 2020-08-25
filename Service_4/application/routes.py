@@ -7,8 +7,8 @@ import requests
 @app.route('/colourpicker', methods=['GET'])
 def colourpicked():
     # request API on port 5001 & 5002 for returned string
-    synonym = requests.get('http://service_2:5001/randomsynonym')
-    colour = requests.get('http://service_3:5002/randomcolour')
+    synonym = requests.get('http://service-2:5001/randomsynonym')
+    colour = requests.get('http://service-3:5002/randomcolour')
 
     # concatenates responses 
     response = synonym.text + " " + colour.text

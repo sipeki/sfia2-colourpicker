@@ -27,6 +27,7 @@ spec:
       labels:
         app: service-1
     spec:
+      hostname: service-1
       containers:
       - name: service-1
         image: sipeki/service_1
