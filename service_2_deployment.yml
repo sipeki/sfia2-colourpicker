@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-2
+spec:
+  selector:
+    matchLabels:
+      app: service-2
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: service-2
+    spec:
+      containers:
+      - name: service-2
+        image: sipeki/service_2
+        ports:
+        - containerPort: 5000
