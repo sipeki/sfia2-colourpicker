@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-2
+  name: service-4
 spec:
   selector:
-    app: service-2
+    app: service-4
   ports:
   - protocol: TCP
     port: 5003
@@ -16,20 +16,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: service-3
+  name: service-4
 spec:
   selector:
     matchLabels:
-      app: service-3
+      app: service-4
   replicas: 3
   template:
     metadata:
       labels:
-        app: service-3
+        app: service-4
     spec:
-      hostname: service-3
+      hostname: service-4
       containers:
-      - name: service-3
-        image: sipeki/service_2
+      - name: service-4
+        image: sipeki/service_4
         ports:
         - containerPort: 5003
