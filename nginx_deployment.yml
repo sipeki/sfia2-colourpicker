@@ -27,6 +27,7 @@ spec:
       labels:
         app: nginx
     spec:
+      hostname: nginx
       containers:
       - name: service
         image: nginx
