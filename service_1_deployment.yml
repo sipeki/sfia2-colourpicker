@@ -7,8 +7,8 @@ spec:
     app: service-1
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 80
+    port: 5000
+    targetPort: 5000
   type: ClusterIP
 
 ---
@@ -33,3 +33,6 @@ spec:
         image: sipeki/service_1
         ports:
         - containerPort: 5000
+        envFrom:
+          - configMapRef:
+              name: sfia2-configmap
